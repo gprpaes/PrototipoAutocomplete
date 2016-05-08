@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.gui.prototipoautocomplete.MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardAutocomplete"
+        android:layout_height="52dp"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="2dp">
+        <EditText
+            android:id="@+id/edtAutocomplete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:hint="Aonde Vou"
+            android:background="@android:color/transparent"
+            />
+
+    </android.support.v7.widget.CardView>
+
+    <android.spport.v7.widget.CardView
+    android:id="@+id/cardLista"
+    android:layout_below="@id/cardAutocomplete"
+    android:layout_marginTop="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scrollbars="vertical"
+        />
+</android.spport.v7.widget.CardView>
+
+</RelativeLayout>
