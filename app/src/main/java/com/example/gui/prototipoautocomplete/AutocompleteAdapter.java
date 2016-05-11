@@ -127,24 +127,22 @@ public class AutocompleteAdapter extends RecyclerView.Adapter<AutocompleteAdapte
 
         public PlaceViewHolder(View view){
             super(view);
-            cardView = (CardView) view.findViewById(R.id.cardLista);
             textView = (TextView) view.findViewById(R.id.txtPlace);
         }
     }
 
     @Override
     public PlaceViewHolder onCreateViewHolder(ViewGroup viewgroup,int i){
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View convertView = inflater.inflate(R.layout.item,viewgroup,false);
-        PlaceViewHolder viewHolder = new PlaceViewHolder(convertView);
-        return viewHolder;
+       View convertView = LayoutInflater.from(viewgroup.getContext())
+               .inflate(R.layout.item,viewgroup, false);
+        return new PlaceViewHolder(convertView);
 
     }
 
     @Override
     public void onBindViewHolder(PlaceViewHolder viewHolder, final int i){
 
-        viewHolder.textView.setText(lstResultados.get(i).getPrimaryText(null));
+        viewHolder.textView.setText(lstResultados.get(i).getFullText(null));
     }
 
     @Override
