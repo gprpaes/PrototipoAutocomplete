@@ -2,6 +2,7 @@ package com.example.gui.prototipoautocomplete;
 
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -122,9 +123,11 @@ public class AutocompleteAdapter extends RecyclerView.Adapter<AutocompleteAdapte
 
     public class PlaceViewHolder extends RecyclerView.ViewHolder{
         public TextView textView;
+        public CardView cardView;
 
         public PlaceViewHolder(View view){
             super(view);
+            cardView = (CardView) view.findViewById(R.id.cardLista);
             textView = (TextView) view.findViewById(R.id.txtPlace);
         }
     }
