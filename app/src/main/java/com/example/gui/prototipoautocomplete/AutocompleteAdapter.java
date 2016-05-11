@@ -140,7 +140,7 @@ public class AutocompleteAdapter extends RecyclerView.Adapter<AutocompleteAdapte
     }
 
     @Override
-    public void onBindViewHolder(PlaceViewHolder viewHolder, final int i){
+    public void onBindViewHolder(PlaceViewHolder viewHolder, int i){
 
         viewHolder.textView.setText(lstResultados.get(i).getFullText(null));
     }
